@@ -19,7 +19,7 @@ const Home = () => {
       setQuery(event.target.value)
   }
  //filter jobs by title
- const filterItems = jobs.filter((jobs) => job.jobTitle.toLowerCase().indexOf(query))
+ const filterItems = jobs.filter((jobs) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()))
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
