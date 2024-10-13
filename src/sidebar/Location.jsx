@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Location = ({handleChange, handleClick}) => {
+const Location = ({handleChange}) => {
     return (
-      <div className='space-y-5'>
-      <h4 className='text-lg font-bold mb-2'>Location</h4>
+      <div >
+      <h4 className='text-lg font-medium mb-2'>Location</h4>
+       <div>
+       <label htmlFor="" className='sidebar-label-container'></label>
+       </div>
       </div>
     )
   }
