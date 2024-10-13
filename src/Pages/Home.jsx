@@ -31,7 +31,10 @@ const Home = () => {
   setSelectedCategory(event.target.value)
  }
  //main function
- const
+ const filteredData = (jobs, selected, query) => {
+  let filteredJobs = jobs;
+  if(query)
+ }
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
