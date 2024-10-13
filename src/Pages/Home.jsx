@@ -30,6 +30,8 @@ const Home = () => {
  const handleClick= (event) => {
   setSelectedCategory(event.target.value)
  }
+ //main function
+ const
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
