@@ -10,7 +10,7 @@ const Home = () => {
   }
   return (
     <div className="text-blue">
-      <Banner/>
+      <Banner query={query} handleInputChange={handleInputChange}/>
     </div>
   )
 }
