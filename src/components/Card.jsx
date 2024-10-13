@@ -21,7 +21,7 @@ const Card = ({ data }) => {
                 <img src={companyLogo} alt={companyName} />
                 <div>
                     <h3 className='text-primary mb-1'>{companyName}</h3>
-                    <p>{jobTitle}</p>
+                    <h2 className='text-lg font-semibold mb-2'>{jobTitle}</h2>
                     <p>{jobLocation}</p>
                     <p>{employmentType}</p>
                     <p>{minPrice} - {maxPrice} ({salaryType})</p>
