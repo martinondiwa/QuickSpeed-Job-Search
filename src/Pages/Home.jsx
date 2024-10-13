@@ -49,6 +49,7 @@ const Home = () => {
     ));
     console.log(filteredJobs)
   }
+  return filteredJobs.map((data,)=>)
  }
   return (
     <div className="text-blue">
