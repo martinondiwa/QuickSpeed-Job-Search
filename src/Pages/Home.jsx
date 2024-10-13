@@ -61,7 +61,7 @@ const Home = () => {
       <Banner query={query} handleInputChange={handleInputChange}/>
 
       <div>
-       <Jobs/>
+       <Jobs result={result}/>
       </div>
     </div>
     
