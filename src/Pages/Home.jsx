@@ -19,7 +19,7 @@ const Home = () => {
       setQuery(event.target.value)
   }
  //filter jobs by title
- const filterItems = jobs.filter((jobs) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+ const filterItems = jobs.filter((job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1)
  console.log(filterItems)
   return (
     <div className="text-blue">
