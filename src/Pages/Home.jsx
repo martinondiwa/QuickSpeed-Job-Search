@@ -13,14 +13,16 @@ const Home = () => {
   }, [])
 
     //console.log(jobs)
-
+ 
+  //handle input change
   const [query, setQuery] = useState ("");
   const handleInputChange = (event) => {
       setQuery(event.target.value)
   }
  //filter jobs by title
  const filterItems = jobs.filter((job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1)
- console.log(filterItems)
+
+ //..........Radio Filtering
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
