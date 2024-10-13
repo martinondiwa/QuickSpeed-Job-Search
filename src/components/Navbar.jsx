@@ -15,7 +15,7 @@ const Navbar = () => {
     { path: "/post-job", title: "Post A Job" },
   ];
   return (
-    <header>
+    <header className=" max-w-screen-2xl container mx-auto">
       <nav>
         <a href="/" className="flex items-center gap-2 text-2xl text-black">
           {" "}
