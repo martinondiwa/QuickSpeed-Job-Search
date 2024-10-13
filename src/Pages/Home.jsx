@@ -7,6 +7,7 @@ import Sidebar from "../sidebar/Sidebar";
 const Home = () => {
     const [selectedLocation, setSelectedLocation] = useState(null);
     const [jobs, setJobs] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetch("jobs.json")
