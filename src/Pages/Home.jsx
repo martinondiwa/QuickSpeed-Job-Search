@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Banner from "../components/Banner"
+import Card from "../components/Card";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -49,7 +50,7 @@ const Home = () => {
     ));
     console.log(filteredJobs)
   }
-  return filteredJobs.map((data,)=>)
+  return filteredJobs.map((data, i)=> <Card key={i}/>)
  }
   return (
     <div className="text-blue">
