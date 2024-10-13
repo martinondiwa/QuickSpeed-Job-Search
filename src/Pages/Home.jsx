@@ -72,7 +72,7 @@ const Home = () => {
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange} />
 
-      <div className="bg-slate-300">
+      <div className="bg-slate-300 md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
         <div>Left</div>
         <div>
           <Jobs result={result} />
