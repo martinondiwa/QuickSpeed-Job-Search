@@ -1,6 +1,7 @@
 import React from "react";
 
 const Banner = () => {
+    const [query, setQuery] ""
   return (
     <div className="max-w-screen-2xl container mx-auto xl:px-4 px-8 md:py-20 py-14">
       <h1 className="text-5xl font-bold text-primary mb-3">
