@@ -2,9 +2,10 @@ import React from 'react';
 
 const InputField = ({handleChange, value, title, name}) => {
   return (
-    <div>
-      
-    </div>
+    <label htmlFor="" className='sidebar-label-container'>
+    <input type="radio" name={name} value={value} onChange={handleChange}/>
+    <span className='checkmark'></span> All
+ </label>
   );
 }
 
