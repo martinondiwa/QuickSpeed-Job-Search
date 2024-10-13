@@ -78,7 +78,7 @@ const Home = () => {
                         <div className="flex justify-center mt-4 space-x-8">
                             <button onClick={handlePrevPage} aria-label="Previous Page">Previous</button>
                             <span> Page {currentPage} of {totalPages}</span>
-                            <button onClick={handleNextPage} aria-label="Next Page" disabled={currentPage===Math.ceil}>Next</button>
+                            <button onClick={handleNextPage} aria-label="Next Page" disabled={currentPage===Math.ceil(filteredItems.length itemsPerPage)}>Next</button>
                         </div>
                     )}
                 </div>
