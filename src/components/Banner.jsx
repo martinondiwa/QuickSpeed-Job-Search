@@ -13,7 +13,7 @@ const Banner = () => {
 
       <form action="">
         <div>
-          <div className="flex md:rounded-s-md rounded shadow-sm ring-2 ring-inset focus-within:ring-inset focus-within:ring-indigo-600">
+          <div className="flex md:rounded-s-md rounded shadow-sm ring-2 ring-inset focus-within:ring-inset focus-within:ring-indigo-600 md:w-1/2 w-full">
            <input type="text" name="title" id="title" placeholder="What position are you looking for?"  className="block flex-1 border-0 bg-transparent py-1.5 pl-8 text-gray-900 placeholdercolor: text-gray-400 focus:right-0 sm:leading-6
            "/>
           </div>
