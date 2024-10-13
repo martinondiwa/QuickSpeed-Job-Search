@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SiOpensearch } from "react-icons/si";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +42,8 @@ const Navbar = () => {
         </ul>
         {/**Sign up & Login Buttons */}
         <div className="text-base text-primary font-medium space-x-5 hidden lg:block"> </div>
+        <Link to="/login">Log in </Link>
+        <Link to="/sign-up">Sign Up</Link>
       </nav>
     </header>
   );
