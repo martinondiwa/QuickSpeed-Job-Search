@@ -6,6 +6,13 @@ const Navbar = () => {
     const handleMenuToggler = () => {
         setIsMenuOpen(!isMenuOpen)
     }
+
+    const navItems = [
+        {path:"/", title:"Start a Search"},
+        {path:"/my-job", title:"My Jobs"},
+        {path:"/salary", title:"Salary Estimate"},
+        {path:"/post-job", title:"Post A Job"},
+    ]
   return (
  <header>
     <nav>
