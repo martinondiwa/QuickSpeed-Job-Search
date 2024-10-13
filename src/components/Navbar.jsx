@@ -6,9 +6,9 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen)
     }
   return (
-    <div>
-      
-    </div>
+ <header>
+    <nav></nav>
+ </header>
   )
 }
 
