@@ -41,6 +41,7 @@ const Navbar = () => {
           ))}
         </ul>
         {/**Sign up & Login Buttons */}
+        <div className="text-base text-primary font-medium space-x-5 hidden lg:block"> </div>
       </nav>
     </header>
   );
