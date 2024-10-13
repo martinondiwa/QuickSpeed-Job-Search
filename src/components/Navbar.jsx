@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SiOpensearch } from "react-icons/si";
 import { Link, NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa6";
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="md:hidden block">
         <button onClick={handleMenuToggler}>
      {
-        isMenuOpen ? <></> : <FaBars className="w-5 h-5 text-primary"/>
+        isMenuOpen ? <FaXmark/> : <FaBars className="w-5 h-5 text-primary"/>
      }
         </button>
         </div>
