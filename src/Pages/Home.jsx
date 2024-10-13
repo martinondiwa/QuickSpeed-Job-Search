@@ -61,6 +61,7 @@ const Home = () => {
                   {
                     isLoading ? (<p>Loading.....</p>) :  result.length > 0 ?  (<Jobs result={result} />) : <>
                      <h3>{result.length} Jobs</h3>
+                     <p>No data found</p>
                     </>
                   }
                 </div>
