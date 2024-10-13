@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoSearchCircleSharp } from "react-icons/io5";
+import { LuMapPin } from "react-icons/lu";
 
 const Banner = ({query, handleInputChange}) => {
   
@@ -26,7 +27,7 @@ const Banner = ({query, handleInputChange}) => {
            <input type="text" name="title" id="title" placeholder="What position are you looking for?"  className="block flex-1 border-0 bg-transparent py-1.5 pl-8 text-gray-900 placeholdercolor: text-gray-400 focus:right-0 sm:leading-6
            " onChange={handleInputChange}
            value={query}/>
-           <IoSearchCircleSharp className="absolute mt-2.5 ml-2 text-gray-400" />
+           <LuMapPin className="absolute mt-2.5 ml-2 text-gray-400" />
           </div>
         </div>
       </form>
