@@ -11,12 +11,14 @@ const Home = () => {
       setJobs(data)
     })
   }, [])
+
     console.log(jobs)
+
   const [query, setQuery] = useState ("");
   const handleInputChange = (event) => {
       setQuery(event.target.value)
   }
- 
+ //filter jobs by title
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
