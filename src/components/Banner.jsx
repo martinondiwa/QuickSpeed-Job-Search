@@ -28,6 +28,8 @@ const Banner = ({query, handleInputChange}) => {
            />
            <LuMapPin className="absolute mt-2.5 ml-2 text-gray-400" />
           </div>
+
+          <button type="submit" className=""></button>
         </div>
       </form>
     </div>
