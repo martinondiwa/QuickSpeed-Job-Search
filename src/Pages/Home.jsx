@@ -40,7 +40,9 @@ const Home = () => {
         return {startIndex, endIndex};
       }
       //function for the next page
-      const 
+      const calculatePageRange = () => {
+        const startIndex = (currentPage - 1) * itemsParPage;
+      }
       // main function 
     const filteredData = () => {
         let filteredJobs = jobs;
