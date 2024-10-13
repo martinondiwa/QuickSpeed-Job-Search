@@ -48,7 +48,7 @@ const Home = () => {
       //function for previous page
       const prevPage = () => {
         if (currentPage > 1) {
-            setCurrentPage
+            setCurrentPage(currentPage - 1)
         }
       }
       // main function 
