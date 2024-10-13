@@ -2,9 +2,7 @@ import React from 'react'
 
 const Jobs = ({result}) => {
   return (
-    <div>
-      
-    </div>
+    <div>{result}</div>
   )
 }
 
