@@ -12,6 +12,7 @@ const Home = () => {
     const itemsParPage = 6;
 
     useEffect(() => {
+        setIsLoading (true);
         fetch("jobs.json")
             .then((res) => res.json())
             .then((data) => {
