@@ -85,6 +85,11 @@ const Home = () => {
                     </>
                   }
                     {/* pagination element */}
+                    {
+                    result.length > 0 ? (
+                    <div></div>
+                    )
+                    }
                 </div>
                 <div className="bg-white p-4 rounded">Right</div>
             </div>
