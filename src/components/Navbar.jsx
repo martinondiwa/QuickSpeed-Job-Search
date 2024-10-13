@@ -7,7 +7,9 @@ const Navbar = () => {
     }
   return (
  <header>
-    <nav></nav>
+    <nav>
+    <a href="/">Quick Speed Job Search</a>
+    </nav>
  </header>
   )
 }
