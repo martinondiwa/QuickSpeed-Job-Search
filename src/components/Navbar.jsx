@@ -21,7 +21,9 @@ const Navbar = () => {
     {/** Nav items for large devices */}
     <ul>
      {
-        navItems.map(({path, title}))
+        navItems.map(({path, title}) => (
+            <li key={path}></li>
+        ))
      }
     </ul>
     </nav>
