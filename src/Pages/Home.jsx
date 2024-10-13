@@ -53,7 +53,7 @@ const Home = () => {
   return filteredJobs.map((data, i)=> <Card key={i} data={data}/>)
  }
 
-  const result =filteredData(jobs, selectedCategory, query)
+  const result =filteredData(jobs, selectedCategory, query);
 
   return (
     <div className="text-blue">
