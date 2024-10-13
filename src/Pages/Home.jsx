@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import Jobs from "./Jobs";
+import Sidebar from "../sidebar/Sidebar";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -74,7 +75,7 @@ const Home = () => {
              {/**Main content */}
       <div className="bg-slate-300 md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
         {/**left Side */}
-        <div className="bg-white p-4 rounded">Left</div>
+        <div className="bg-white p-4 rounded"><Sidebar/></div>
         <div className="col-span-2 bg-slate-200 p-4 rounded-md">
         {/**job cards */}
           <Jobs result={result} />
