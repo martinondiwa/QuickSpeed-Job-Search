@@ -23,7 +23,7 @@ const Card = ({ data }) => {
                     <h3 className='text-primary mb-1'>{companyName}</h3>
                     <h2 className='text-lg font-semibold mb-2'>{jobTitle}</h2>
                     <div>
-                     <span><PiMapPinLineFill />{jobLocation}</span>
+                     <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
                     </div>
                     <p>{employmentType}</p>
                     <p>{minPrice} - {maxPrice} ({salaryType})</p>
