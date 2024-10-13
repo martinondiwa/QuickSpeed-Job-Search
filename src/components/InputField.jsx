@@ -4,7 +4,7 @@ const InputField = ({handleChange, value, title, name}) => {
   return (
     <label htmlFor="" className='sidebar-label-container'>
     <input type="radio" name={name} value={value} onChange={handleChange}/>
-    <span className='checkmark'></span> All
+    <span className='checkmark'></span> {title}
  </label>
   );
 }
