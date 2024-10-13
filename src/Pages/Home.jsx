@@ -59,7 +59,7 @@ const Home = () => {
                 <div className="bg-white p-4 rounded"><Sidebar handleChange={handleChange} /></div>
                 <div className="col-span-2 bg-slate-200 p-4 rounded-md">
                   {
-                    isLoading ? (<P>Loading.....</P>) :   <Jobs result={result} />
+                    isLoading ? (<p>Loading.....</p>) :   <Jobs result={result} />
                   }
                 </div>
                 <div className="bg-white p-4 rounded">Right</div>
