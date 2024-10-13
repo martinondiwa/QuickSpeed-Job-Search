@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
  <header>
     <nav>
-    <a href="/"> <SiOpensearch />
+    <a href="/" className='flex items-center gap-2 text-2xl'> <SiOpensearch />
     <span>Quick Speed Job Search</span></a>
     </nav>
  </header>
