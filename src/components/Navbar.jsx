@@ -9,7 +9,8 @@ const Navbar = () => {
   return (
  <header>
     <nav>
-    <a href="/"> <SiOpensearch />Quick Speed Job Search</a>
+    <a href="/"> <SiOpensearch />
+    <span>Quick Speed Job Search</span></a>
     </nav>
  </header>
   )
