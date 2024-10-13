@@ -47,6 +47,7 @@ const Home = () => {
       salaryType.toLowerCase()===selected.toLowerCase() ||
       employmentType.toLowerCase() === selected.toLowerCase()
     ));
+    console.log(filteredJobs)
   }
  }
   return (
