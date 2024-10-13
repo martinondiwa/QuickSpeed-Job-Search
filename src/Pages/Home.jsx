@@ -59,10 +59,10 @@ const Home = () => {
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
-
-      <div>
-       <Jobs result={result}/>
-      </div>
+      
+      <div></div>
+      <div><Jobs result={result}/></div>
+      <div></div>
     </div>
     
   )
