@@ -24,13 +24,13 @@ const Card = ({ data }) => {
                 <div>
                     <h3 className='text-primary mb-1'>{companyName}</h3>
                     <h2 className='text-lg font-semibold mb-2'>{jobTitle}</h2>
-                    <div className='fle'>
+                    <div className='flex'>
                      <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
-                     <span className='flex items-center gap-2'><GiAlarmClock />{jobLocation}</span>
+                     <span className='flex items-center gap-2'><GiAlarmClock />{employmentType}</span>
                      <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
                      <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
                     </div>
-                    <p>{employmentType}</p>
+                    
                     <p>{minPrice} - {maxPrice} ({salaryType})</p>
                     <p>{postingDate}</p>
                     <p>{description}</p>
