@@ -27,7 +27,7 @@ const Navbar = () => {
           {navItems.map(({ path, title }) => (
             <li key={path}>
               <NavLink
-                to="/messages"
+                to={path}
                 className={({ isActive, isPending, isTransitioning }) =>
                   [
                     isPending ? "pending" : "",
