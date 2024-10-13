@@ -81,6 +81,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       ))}
+      <li> <Link to="/login" className="py-2 px-5 border rounded"> Log in{" "}</Link></li>
     </ul>
       </div>
     </header>
