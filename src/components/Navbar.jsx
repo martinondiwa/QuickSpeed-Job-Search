@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
 
         {/**Mobile Menu */}
-        <div><FaBars className=""/></div>
+        <div><FaBars className="w-5 h-5 text-primary"/></div>
       </nav>
     </header>
   );
