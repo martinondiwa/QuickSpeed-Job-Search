@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SiOpensearch } from "react-icons/si";
 import { Link, NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +55,7 @@ const Navbar = () => {
         </div>
 
         {/**Mobile Menu */}
+        <div><FaBars className=""/></div>
       </nav>
     </header>
   );
