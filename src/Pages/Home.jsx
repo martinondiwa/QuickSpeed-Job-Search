@@ -6,7 +6,9 @@ const Home = () => {
   const[jobs, setJobs] = useState ([]);
 
   useEffect (() => {
-    fetch ("jobs.json").then(res => res.json()).then(data =>{})
+    fetch ("jobs.json").then(res => res.json()).then(data =>{
+      console.log(data)
+    })
   }, [])
 
   const [query, setQuery] = useState ("");
