@@ -6,9 +6,8 @@ const Card = ({data}) => {
         const {companyName, companyLogo, minPrice, maxPrice, salaryType, jobLocation, employmentType,postingDate, description} = data; 
     }
   return (
-    <div>
-      <h3>{data.jobTitle}</h3>
-    </div>
+   <section>
+   </section>
   )
 }
 
