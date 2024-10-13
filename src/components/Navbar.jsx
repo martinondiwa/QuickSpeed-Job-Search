@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
 
         {/**Mobile Menu */}
-        <div className="block">
+        <div className="md:hidden block">
         <button onClick={handleMenuToggler}>
      {
         isMenuOpen ? <FaXmark className="w-5 h-5 text-primary"/> : <FaBars className="w-5 h-5 text-primary"/>
