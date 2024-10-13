@@ -84,6 +84,7 @@ const Home = () => {
                      <p>No data found</p>
                     </>
                   }
+                    {/* pagination element */}
                 </div>
                 <div className="bg-white p-4 rounded">Right</div>
             </div>
