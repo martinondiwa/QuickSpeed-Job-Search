@@ -22,8 +22,12 @@ const Home = () => {
  //filter jobs by title
  const filterItems = jobs.filter((job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1)
 
- //..........Radio Filtering
+ //..........Radio Filtering......
  const handleChange= (event) => {
+  setSelectedCategory(event.target.value)
+ }
+ //.....button based filtering....
+ const handleClick= (event) => {
   setSelectedCategory(event.target.value)
  }
   return (
