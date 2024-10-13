@@ -41,7 +41,9 @@ const Home = () => {
 
   //category filtering 
   if(selected){
-    filteredJobs=filteredJobs.filter(({jobLocation, maxPrice, experienceLevel, salaryType, employmentType, postingDate}) =>())
+    filteredJobs=filteredJobs.filter(({jobLocation, maxPrice, experienceLevel, salaryType, employmentType, postingDate}) =>(
+      jobLocation.toLowerCase()===selected.toLowerCase() ||
+    ));
   }
  }
   return (
