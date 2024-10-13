@@ -45,7 +45,7 @@ const Home = () => {
         setCurrentPage(currentPage + 1);
        }
       }
-      
+      //function for previous page
       // main function 
     const filteredData = () => {
         let filteredJobs = jobs;
