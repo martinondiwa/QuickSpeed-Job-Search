@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { PiMapPinLineFill } from "react-icons/pi";
 import { GiAlarmClock } from "react-icons/gi";
 import { HiCurrencyDollar } from "react-icons/hi";
+import { SlCalender } from "react-icons/sl";
+
 
 const Card = ({ data }) => {
     const {
@@ -28,12 +30,9 @@ const Card = ({ data }) => {
                     <div className='flex'>
                      <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
                      <span className='flex items-center gap-2'><GiAlarmClock />{employmentType}</span>
-                     <span className='flex items-center gap-2'><HiCurrencyDollar />{minPrice}-{maxPrice}</span>
-                     <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
+                     <span className='flex items-center gap-2'><HiCurrencyDollar />{minPrice}-{maxPrice}k</span>
+                     <span className='flex items-center gap-2'><SlCalender />{postingDate}</span>
                     </div>
-                    
-                    <p>{minPrice} - {maxPrice} ({salaryType})</p>
-                    <p>{postingDate}</p>
                     <p>{description}</p>
                 </div>
             </Link>
