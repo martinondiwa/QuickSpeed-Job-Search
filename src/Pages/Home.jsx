@@ -60,7 +60,7 @@ const Home = () => {
                 <div className="col-span-2 bg-slate-200 p-4 rounded-md">
                   {
                     isLoading ? (<p>Loading.....</p>) :  result.length > 0 ?  (<Jobs result={result} />) : <>
-                     <h3>{result.length}</h3>
+                     <h3>{result.length} Jobs</h3>
                     </>
                   }
                 </div>
