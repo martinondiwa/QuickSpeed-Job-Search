@@ -35,7 +35,8 @@ const Home = () => {
     };
      // calculate the index range
       const calculatePageRange = () => {
-        const startIndex = (currentPage - 1) * itemsParPage
+        const startIndex = (currentPage - 1) * itemsParPage;
+        const endIndex = startIndex + itemsParPage;
       }
       // main function 
     const filteredData = () => {
