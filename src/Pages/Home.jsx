@@ -8,6 +8,7 @@ const Home = () => {
     const [selectedLocation, setSelectedLocation] = useState(null);
     const [jobs, setJobs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [currentPage, setCurrentPage] = useState (1);
 
     useEffect(() => {
         fetch("jobs.json")
