@@ -8,7 +8,7 @@ const Card = ({data}) => {
     }
   return (
    <section className='card'>
-   <Link to={"/"} className='flex gap-4 flex-col'>
+   <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start'>
 
    </Link>
    </section>
