@@ -64,10 +64,10 @@ const Navbar = () => {
         </div>
       </nav>
       {/**Nav items for mobile */}
-      <div className="px-4 bg-black py-5 rounded-full">
+      <div className={'px-4 bg-black py-5 rounded-full ${isMenuOpen ? "" : ""}'}>
       <ul className="hidden md:flex gap-12">
       {navItems.map(({ path, title }) => (
-        <li key={path} className="text-base text-primary">
+        <li key={path} className="text-base text-yellow-50">
           <NavLink
             to={path}
             className={({ isActive, isTransitioning }) =>
