@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+    const [isMenuOpen,setIsMenuOpen]= useState(false);
   return (
     <div>
       
