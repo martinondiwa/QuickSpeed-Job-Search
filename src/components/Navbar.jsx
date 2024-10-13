@@ -63,6 +63,26 @@ const Navbar = () => {
         </button>
         </div>
       </nav>
+      {/**Nav items for mobile */}
+      <div>
+      <ul className="hidden md:flex gap-12">
+      {navItems.map(({ path, title }) => (
+        <li key={path} className="text-base text-primary">
+          <NavLink
+            to={path}
+            className={({ isActive, isTransitioning }) =>
+              [
+                isActive ? "active" : "",
+                isTransitioning ? "transitioning" : "",
+              ].join(" ")
+            }
+          >
+            {title}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+      </div>
     </header>
   );
 };
