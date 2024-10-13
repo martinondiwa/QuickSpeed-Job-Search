@@ -41,7 +41,7 @@ const Home = () => {
 
   //category filtering 
   if(selected){
-    filteredJobs=filteredJobs.filter(({}))
+    filteredJobs=filteredJobs.filter(({jobLocation, maxPrice, experienceLevel, salaryType}) =>())
   }
  }
   return (
