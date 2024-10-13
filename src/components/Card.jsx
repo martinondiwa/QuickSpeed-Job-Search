@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Card = ({ data }) => {
     const {
         companyName,
+        jobTitle,
         companyLogo,
         minPrice,
         maxPrice,
@@ -19,7 +20,8 @@ const Card = ({ data }) => {
             <Link to="/" className='flex gap-4 flex-col sm:flex-row items-start'>
                 <img src={companyLogo} alt={companyName} />
                 <div>
-                    <h3>{companyName}</h3>
+                    <h3 className='text-primary mb-1'>{companyName}</h3>
+                    <p>{jobTitle}</p>
                     <p>{jobLocation}</p>
                     <p>{employmentType}</p>
                     <p>{minPrice} - {maxPrice} ({salaryType})</p>
