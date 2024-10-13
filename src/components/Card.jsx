@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { PiMapPinLineFill } from "react-icons/pi";
 const Card = ({ data }) => {
     const {
         companyName,
@@ -22,6 +22,9 @@ const Card = ({ data }) => {
                 <div>
                     <h3 className='text-primary mb-1'>{companyName}</h3>
                     <h2 className='text-lg font-semibold mb-2'>{jobTitle}</h2>
+                    <div>
+                     <span><PiMapPinLineFill /></span>
+                    </div>
                     <p>{jobLocation}</p>
                     <p>{employmentType}</p>
                     <p>{minPrice} - {maxPrice} ({salaryType})</p>
