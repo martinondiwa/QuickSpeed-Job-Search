@@ -33,7 +33,11 @@ const Home = () => {
     const handleChange = (event) => {
         setSelectedLocation(event.target.value);
     };
-
+     // calculate the index range
+      const calculatePageRange = () => {
+        const startIndex = (currentPage - 1) * itemsParPage
+      }
+      // main function 
     const filteredData = () => {
         let filteredJobs = jobs;
 
