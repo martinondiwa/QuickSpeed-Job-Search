@@ -18,6 +18,7 @@ const Navbar = () => {
     <nav>
     <a href="/" className='flex items-center gap-2 text-2xl text-black'> <SiOpensearch />
     <span>Quick Speed Job Search</span></a>
+    {/** Nav items for large devices */}
     </nav>
  </header>
   )
