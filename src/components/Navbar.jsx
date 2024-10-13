@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { SiOpensearch } from "react-icons/si";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen,setIsMenuOpen]= useState(false);
@@ -22,7 +23,9 @@ const Navbar = () => {
     <ul>
      {
         navItems.map(({path, title}) => (
-            <li key={path}></li>
+            <li key={path}>
+            <NavLink></NavLink>
+            </li>
         ))
      }
     </ul>
