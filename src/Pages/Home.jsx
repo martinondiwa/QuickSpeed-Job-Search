@@ -64,7 +64,7 @@ const Home = () => {
                 (job) => job.jobLocation.toLowerCase() === selectedLocation.toLowerCase()
             );
         }
-
+         // slice the data based on current page
         return filteredJobs.map((data, i) => <Card key={i} data={data} />);
     };
 
