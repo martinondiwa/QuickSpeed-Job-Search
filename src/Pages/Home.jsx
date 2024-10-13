@@ -47,7 +47,9 @@ const Home = () => {
       }
       //function for previous page
       const prevPage = () => {
-        
+        if (currentPage > 1) {
+            setCurrentPage
+        }
       }
       // main function 
     const filteredData = () => {
