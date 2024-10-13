@@ -52,6 +52,9 @@ const Home = () => {
   }
   return filteredJobs.map((data, i)=> <Card key={i} data={data}/>)
  }
+
+  const result =filteredData(jobs, selectedCategory, query)
+
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
