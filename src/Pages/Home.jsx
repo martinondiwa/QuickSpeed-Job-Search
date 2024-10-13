@@ -40,10 +40,10 @@ const Home = () => {
         return {startIndex, endIndex};
       }
       //function for the next page
-      const calculatePageRange = () => {
-        const startIndex = (currentPage - 1) * itemsParPage;
-        const endIndex = startIndex + itemsParPage;
+      const nextPage = () => {
+       if (currentPage,)
       }
+      
       // main function 
     const filteredData = () => {
         let filteredJobs = jobs;
