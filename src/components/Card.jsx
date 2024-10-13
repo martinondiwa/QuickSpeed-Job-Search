@@ -8,7 +8,9 @@ const Card = ({data}) => {
     }
   return (
    <section className='card'>
-   <Link></Link>
+   <Link to={"/"} className='flex gap-4 flex-col'>
+
+   </Link>
    </section>
   )
 }
