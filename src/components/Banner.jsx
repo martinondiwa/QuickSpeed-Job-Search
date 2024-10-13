@@ -14,7 +14,7 @@ const Banner = () => {
       <form action="">
         <div>
           <div>
-           <input type="text" name="title" id="title" className="block flex-1 border-0 bg-transparent py-1.5 pl-8 text-gray-900 placeholdercolor: text-gray-400 focus:right-0 sm:leading-6
+           <input type="text" name="title" id="title" placeholder="What position are you looking for?" className="block flex-1 border-0 bg-transparent py-1.5 pl-8 text-gray-900 placeholdercolor: text-gray-400 focus:right-0 sm:leading-6
            "/>
           </div>
         </div>
