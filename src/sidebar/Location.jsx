@@ -7,6 +7,7 @@ const Location = ({handleChange}) => {
        <div>
        <label htmlFor="" className='sidebar-label-container'>
           <input type="radio" name='test' id='test' value="" onChange={handleChange}/>
+          <span className='checkmark'></span> All
        </label>
        </div>
       </div>
