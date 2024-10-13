@@ -28,9 +28,8 @@ const Navbar = () => {
             <li key={path}>
               <NavLink
                 to={path}
-                className={({ isActive, isPending, isTransitioning }) =>
+                className={({ isActive, isTransitioning }) =>
                   [
-                    isPending ? "pending" : "",
                     isActive ? "active" : "",
                     isTransitioning ? "transitioning" : "",
                   ].join(" ")
