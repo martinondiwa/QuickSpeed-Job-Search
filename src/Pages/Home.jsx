@@ -87,7 +87,10 @@ const Home = () => {
                     {/* pagination element */}
                     {
                     result.length > 0 ? (
-                    <div className=" flex justify-center mt-4 space-x-8"></div>
+                    <div className=" flex justify-center mt-4 space-x-8">
+                     <button>Previous</button>
+                     <button>Next</button>
+                    </div>
                     )
                     }
                 </div>
