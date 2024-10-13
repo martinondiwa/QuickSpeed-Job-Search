@@ -3,7 +3,7 @@ import { IoSearchCircleSharp } from "react-icons/io5";
 
 const Banner = () => {
     const [query, setQuery] = useState ("");
-    Const handleInputChange = (event) => {
+    const handleInputChange = (event) => {
         setQuery(event.target.value)
     }
   return (
