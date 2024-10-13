@@ -88,7 +88,7 @@ const Home = () => {
                     {
                     result.length > 0 ? (
                     <div className=" flex justify-center mt-4 space-x-8">
-                     <button>Previous</button>
+                     <button onClick={prevPage}>Previous</button>
                      <span> Page {currentPage} of {Math.ceil(filteredItems.length/itemsParPage)}</span>
                      <button>Next</button>
                     </div>
