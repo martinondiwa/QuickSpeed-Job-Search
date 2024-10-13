@@ -58,7 +58,9 @@ const Home = () => {
             <div className="bg-slate-300 md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
                 <div className="bg-white p-4 rounded"><Sidebar handleChange={handleChange} /></div>
                 <div className="col-span-2 bg-slate-200 p-4 rounded-md">
-                    <Jobs result={result} />
+                  {
+                    isLoading ? (<P>Loading.....</P>) :   <Jobs result={result} />
+                  }
                 </div>
                 <div className="bg-white p-4 rounded">Right</div>
             </div>
