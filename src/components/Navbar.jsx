@@ -36,7 +36,7 @@ const Navbar = () => {
                   ].join(" ")
                 }
               >
-                Messages
+                {title}
               </NavLink>
             </li>
           ))}
