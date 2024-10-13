@@ -40,6 +40,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        {/**Sign up & Login Buttons */}
       </nav>
     </header>
   );
