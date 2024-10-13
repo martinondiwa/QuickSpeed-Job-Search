@@ -17,6 +17,7 @@ const Home = () => {
             .then((res) => res.json())
             .then((data) => {
                 setJobs(data);
+                setIsLoading(false);
             });
     }, []);
 
