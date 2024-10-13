@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 const Banner = () => {
-    const [query, setQuery] = useState (""); 
-
-    Const handleInputChange = (event) => {}
+    const [query, setQuery] = useState ("");
+    Const handleInputChange = (event) => {
+        setQuery(event.target.value)
+    }
   return (
     <div className="max-w-screen-2xl container mx-auto xl:px-4 px-8 md:py-20 py-14">
       <h1 className="text-5xl font-bold text-primary mb-3">
