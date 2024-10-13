@@ -66,6 +66,7 @@ const Home = () => {
         }
          // slice the data based on current page
          const {startIndex, endIndex} = calculatePageRange();
+         filteredJobs = filteredJobs.slice(startIndex, endIndex)
         return filteredJobs.map((data, i) => <Card key={i} data={data} />);
     };
 
