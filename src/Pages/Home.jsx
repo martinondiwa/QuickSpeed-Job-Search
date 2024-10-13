@@ -39,6 +39,8 @@ const Home = () => {
         const endIndex = startIndex + itemsParPage;
         return {startIndex, endIndex};
       }
+      //function for the next page
+      const 
       // main function 
     const filteredData = () => {
         let filteredJobs = jobs;
