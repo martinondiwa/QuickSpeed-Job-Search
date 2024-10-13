@@ -23,9 +23,9 @@ const Navbar = () => {
           <span>Quick Speed Job Search</span>
         </a>
         {/** Nav items for large devices */}
-        <ul>
+        <ul className="hidden md:flex gap-12">
           {navItems.map(({ path, title }) => (
-            <li key={path}>
+            <li key={path} className="text-base text-primary">
               <NavLink
                 to={path}
                 className={({ isActive, isTransitioning }) =>
