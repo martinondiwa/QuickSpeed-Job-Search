@@ -65,6 +65,7 @@ const Home = () => {
             );
         }
          // slice the data based on current page
+         const {startIndex, endIndex} = calculatePageRange();
         return filteredJobs.map((data, i) => <Card key={i} data={data} />);
     };
 
