@@ -23,6 +23,9 @@ const Home = () => {
  const filterItems = jobs.filter((job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1)
 
  //..........Radio Filtering
+ const handleChange= (event) => {
+  setSelectedCategory(event.target.value)
+ }
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
