@@ -2,9 +2,9 @@ import React from 'react'
 
 const Card = ({data}) => {
 
-    const Card = ({data})=> {
-
-    } = data;
+    const Card = ({data})=> { 
+        const {companyName, companyLogo,} = data; 
+    }
   return (
     <div>
       <h3>{data.jobTitle}</h3>
