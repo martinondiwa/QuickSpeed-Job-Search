@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Sidebar = ({handleChange}) => {
+const Sidebar = ({handleChange, handleClick}) => {
   return (
     <div>
       
