@@ -33,7 +33,9 @@ const Home = () => {
  //main function
  const filteredData = (jobs, selected, query) => {
   let filteredJobs = jobs;
-  if(query)
+  if(query) {
+    filteredJobs=filterItems;
+  }
  }
   return (
     <div className="text-blue">
