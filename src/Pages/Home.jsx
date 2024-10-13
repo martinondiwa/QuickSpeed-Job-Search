@@ -46,6 +46,9 @@ const Home = () => {
        }
       }
       //function for previous page
+      const prevPage = () => {
+        
+      }
       // main function 
     const filteredData = () => {
         let filteredJobs = jobs;
