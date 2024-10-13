@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoSearchCircleSharp } from "react-icons/io5";
 
-const Banner = (query, handleInputChange) => {
+const Banner = ({query, handleInputChange}) => {
   
   return (
     <div className="max-w-screen-2xl container mx-auto xl:px-4 px-8 md:py-20 py-14">
