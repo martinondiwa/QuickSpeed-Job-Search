@@ -19,6 +19,11 @@ const Navbar = () => {
     <a href="/" className='flex items-center gap-2 text-2xl text-black'> <SiOpensearch />
     <span>Quick Speed Job Search</span></a>
     {/** Nav items for large devices */}
+    <ul>
+     {
+        navItems.map(({path, title}))
+     }
+    </ul>
     </nav>
  </header>
   )
