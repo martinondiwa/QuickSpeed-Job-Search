@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { IoSearchCircleSharp } from "react-icons/io5";
 
-const Banner = () => {
-    const [query, setQuery] = useState ("");
-    const handleInputChange = (event) => {
-        setQuery(event.target.value)
-       
-    }
+const Banner = (query, handleInputChange) => {
+  
   return (
     <div className="max-w-screen-2xl container mx-auto xl:px-4 px-8 md:py-20 py-14">
       <h1 className="text-5xl font-bold text-primary mb-3">
