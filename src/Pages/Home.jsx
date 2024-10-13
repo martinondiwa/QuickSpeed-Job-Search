@@ -40,7 +40,9 @@ const Home = () => {
   }
 
   //category filtering 
-  if
+  if(selected){
+    filteredJobs=filteredJobs.filter(({}))
+  }
  }
   return (
     <div className="text-blue">
