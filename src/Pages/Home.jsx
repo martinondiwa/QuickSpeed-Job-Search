@@ -6,8 +6,8 @@ const Home = () => {
   const [query, setQuery] = useState ("");
   const handleInputChange = (event) => {
       setQuery(event.target.value)
-
   }
+  console.log(query)
   return (
     <div className="text-blue">
       <Banner query={query} handleInputChange={handleInputChange}/>
