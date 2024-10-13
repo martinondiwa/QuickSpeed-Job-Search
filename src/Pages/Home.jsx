@@ -8,9 +8,10 @@ const Home = () => {
   useEffect (() => {
     fetch ("jobs.json").then(res => res.json()).then(data =>{
       console.log(data)
+      setJobs(data)
     })
   }, [])
-
+    console.log(jobs)
   const [query, setQuery] = useState ("");
   const handleInputChange = (event) => {
       setQuery(event.target.value)
