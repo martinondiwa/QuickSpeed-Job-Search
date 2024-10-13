@@ -42,7 +42,7 @@ const Home = () => {
       //function for the next page
       const nextPage = () => {
        if (currentPage < Math.ceil(filterItems.length / itemsParPage)){
-        setCurrentPage(currentPage)
+        setCurrentPage(currentPage + 1)
        }
       }
       
