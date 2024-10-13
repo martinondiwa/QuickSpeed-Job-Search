@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { SiOpensearch } from "react-icons/si";
 
 const Navbar = () => {
     const [isMenuOpen,setIsMenuOpen]= useState(false);
@@ -8,7 +9,7 @@ const Navbar = () => {
   return (
  <header>
     <nav>
-    <a href="/">Quick Speed Job Search</a>
+    <a href="/"> <SiOpensearch />Quick Speed Job Search</a>
     </nav>
  </header>
   )
