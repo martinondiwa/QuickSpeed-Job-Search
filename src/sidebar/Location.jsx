@@ -5,7 +5,9 @@ const Location = ({handleChange}) => {
       <div >
       <h4 className='text-lg font-medium mb-2'>Location</h4>
        <div>
-       <label htmlFor="" className='sidebar-label-container'></label>
+       <label htmlFor="" className='sidebar-label-container'>
+          <input type="radio" name='test' id='test' value="" onChange={handleChange}/>
+       </label>
        </div>
       </div>
     )
