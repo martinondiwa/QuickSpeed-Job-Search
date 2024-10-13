@@ -33,11 +33,14 @@ const Home = () => {
  //main function
  const filteredData = (jobs, selected, query) => {
   let filteredJobs = jobs;
-  
+
   //filtering input items
   if(query) {
     filteredJobs=filterItems;
   }
+
+  //category filtering 
+  if
  }
   return (
     <div className="text-blue">
