@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PiMapPinLineFill } from "react-icons/pi";
+import { GiAlarmClock } from "react-icons/gi";
+
 const Card = ({ data }) => {
     const {
         companyName,
@@ -22,7 +24,10 @@ const Card = ({ data }) => {
                 <div>
                     <h3 className='text-primary mb-1'>{companyName}</h3>
                     <h2 className='text-lg font-semibold mb-2'>{jobTitle}</h2>
-                    <div>
+                    <div className='fle'>
+                     <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
+                     <span className='flex items-center gap-2'><GiAlarmClock />{jobLocation}</span>
+                     <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
                      <span className='flex items-center gap-2'><PiMapPinLineFill />{jobLocation}</span>
                     </div>
                     <p>{employmentType}</p>
