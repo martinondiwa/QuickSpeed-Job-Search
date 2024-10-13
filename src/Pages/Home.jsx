@@ -9,6 +9,7 @@ const Home = () => {
     const [jobs, setJobs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState (1);
+    const itemsParPage = 6;
 
     useEffect(() => {
         fetch("jobs.json")
