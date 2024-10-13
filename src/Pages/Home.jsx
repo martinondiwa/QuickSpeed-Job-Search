@@ -12,7 +12,7 @@ const Home = () => {
     })
   }, [])
 
-    console.log(jobs)
+    //console.log(jobs)
 
   const [query, setQuery] = useState ("");
   const handleInputChange = (event) => {
