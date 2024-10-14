@@ -28,7 +28,9 @@ const JobPostingData = ({handleChange}) => {
             <span className='checkmark'></span> All time
         </label>
 
-        <InputField handleChange={handleChange} value="london" title="London" name="location" />
+        <InputField handleChange={handleChange}
+         value= {twentyFourHoursAgoDate} 
+         title="Last 24 Hours" name="test" />
         <InputField handleChange={handleChange} value="seattle" title="Seattle" name="location" />
         <InputField handleChange={handleChange} value="brussels" title="Brussels" name="location" />
         <InputField handleChange={handleChange} value="san Francisco" title="San Francisco" name="location" />
