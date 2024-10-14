@@ -20,6 +20,7 @@ const Salary = ({ handleChange, handleClick }) => {
           />
           <span className="checkmark"></span> All
         </label>
+        <InputField handleChange={handleChange} value="london" title="London" name="location" />
       </div>
     </div>
   );
