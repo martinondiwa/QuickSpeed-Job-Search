@@ -2,6 +2,8 @@ import React from 'react'
 import InputField from '../components/InputField'
 
 const JobPostingData = ({handleChange}) => {
+    const now = new Date();
+    console.log(now)
   return (
     <div>
     <h4 className='text-lg font-medium mb-2'>Date of Posting</h4>
