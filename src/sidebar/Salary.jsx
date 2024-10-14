@@ -25,6 +25,11 @@ const Salary = ({ handleChange, handleClick }) => {
         value={30} 
         title="< 30000k" 
         name="test2" />
+
+        <InputField handleChange={handleChange} 
+        value={50} 
+        title="< 50000k" 
+        name="test2" />
       </div>
     </div>
   );
