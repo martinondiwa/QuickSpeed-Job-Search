@@ -86,7 +86,7 @@ const Home = () => {
           )}
           {currentJobs.length > 0 && (
             <div className="flex justify-center mt-4 space-x-8">
-              <button onClick={handlePrevPage} aria-label="Previous Page" disabled={currentPage=== 1}>
+              <button onClick={handlePrevPage} aria-label="Previous Page" disabled={currentPage=== 1} className="hover:underline">
                 Previous
               </button>
               <span>
