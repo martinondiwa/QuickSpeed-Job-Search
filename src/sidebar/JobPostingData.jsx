@@ -5,6 +5,8 @@ const JobPostingData = ({handleChange}) => {
     const now = new Date();
     //console.log(now)
     const twentyFourHoursAgo = new Date(now-24 * 60 * 60 * 1000);
+    const sevenDaysAgo = new Date(now- 7 * 24 * 60 * 60 * 1000);
+    const ThirtyDaysAgo = new Date(now- 30 * 24 * 60 * 60 * 1000);
     console.log (twentyFourHoursAgo)
   return (
     <div>
