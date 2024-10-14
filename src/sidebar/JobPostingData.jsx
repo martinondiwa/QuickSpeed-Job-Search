@@ -3,7 +3,9 @@ import InputField from '../components/InputField'
 
 const JobPostingData = ({handleChange}) => {
     const now = new Date();
-    console.log(now)
+    //console.log(now)
+    const twentyFourHoursAgo = new Date(now-24 * 60 * 60 * 1000);
+    console.log (twentyFourHoursAgo)
   return (
     <div>
     <h4 className='text-lg font-medium mb-2'>Date of Posting</h4>
