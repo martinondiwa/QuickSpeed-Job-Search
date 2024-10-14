@@ -6,7 +6,7 @@ const Salary = (handleChange, handleClick) => {
     <div>
       <h4 className='text-lg font-medium mb-2'>Salary</h4>
       <div>
-      <Button/>
+      <Button onClickHandler={handleClick} value="" title="Hourly"/>
       </div>
     </div>
   );
