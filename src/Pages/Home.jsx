@@ -89,7 +89,7 @@ const Home = () => {
               <button onClick={handlePrevPage} aria-label="Previous Page" disabled={currentPage=== 1} className="hover:underline">
                 Previous
               </button>
-              <span>
+              <span className="mx-2">
                 {" "}
                 Page {currentPage} of {totalPages}
               </span>
