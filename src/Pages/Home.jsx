@@ -5,7 +5,7 @@ import Jobs from "./Jobs";
 import Sidebar from "../sidebar/Sidebar";
 
 const Home = () => {
-  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState("all-time"); // Default to 'all-time'
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -39,8 +39,8 @@ const Home = () => {
   const filteredJobs = jobs
     .filter((job) => job.jobTitle.toLowerCase().includes(query.toLowerCase()))
     .filter((job) =>
-      selectedLocation
-        ? job.jobLocation.toLowerCase() === selectedLocation.toLowerCase()
+      selectedLocation && selectedLocation !== "all-time"
+        ? job.postingDate === selectedLocation
         : true
     );
 
@@ -65,7 +65,7 @@ const Home = () => {
       <Banner query={query} handleInputChange={handleInputChange} />
       <div className="bg-slate-300 md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
         <div className="bg-white p-4 rounded">
-          <Sidebar handleChange={handleChange} />
+          <Sidebar handleChange={handleChange} selectedLocation={selectedLocation} />
         </div>
         <div className="col-span-2 bg-slate-200 p-4 rounded-md">
           {isLoading ? (
@@ -86,18 +86,17 @@ const Home = () => {
           )}
           {currentJobs.length > 0 && (
             <div className="flex justify-center mt-4 space-x-8">
-              <button onClick={handlePrevPage} aria-label="Previous Page" disabled={currentPage=== 1} className="hover:underline">
+              <button onClick={handlePrevPage} aria-label="Previous Page" disabled={currentPage === 1} className="hover:underline">
                 Previous
               </button>
               <span className="mx-2">
-                {" "}
                 Page {currentPage} of {totalPages}
               </span>
               <button
                 onClick={handleNextPage}
                 aria-label="Next Page"
-                disabled={currentPage === totalPages} className="hover:underline"
-                
+                disabled={currentPage === totalPages}
+                className="hover:underline"
               >
                 Next
               </button>
