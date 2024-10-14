@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Jobs from "./Jobs";
 import Sidebar from "../sidebar/Sidebar";
 
+
 const Home = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [jobs, setJobs] = useState([]);
@@ -96,7 +97,8 @@ const Home = () => {
               <button
                 onClick={handleNextPage}
                 aria-label="Next Page"
-                disabled={currentPage === totalPages}
+                disabled={currentPage === Math.ceil(filteredItems.length/ itemsPerPage)}
+                
               >
                 Next
               </button>
