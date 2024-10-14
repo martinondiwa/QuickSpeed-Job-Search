@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import InputField from "../components/InputField";
 
 const Salary = ({ handleChange, handleClick }) => {
   return (
@@ -20,7 +21,10 @@ const Salary = ({ handleChange, handleClick }) => {
           />
           <span className="checkmark"></span> All
         </label>
-        <InputField handleChange={handleChange} value="london" title="London" name="location" />
+        <InputField handleChange={handleChange} 
+        value={30} 
+        title="< 30000k" 
+        name="test2" />
       </div>
     </div>
   );
