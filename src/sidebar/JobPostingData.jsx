@@ -33,7 +33,8 @@ const JobPostingData = ({handleChange}) => {
          title="Last 24 Hours" name="test" />
         <InputField handleChange={handleChange} 
         value={sevenDaysAgoDate} title="Last 7 Days" name="test" />
-        <InputField handleChange={handleChange} value="brussels" title="Brussels" name="location" />
+        <InputField handleChange={handleChange} 
+        value={ThirtyDaysAgoDate} title="Last 30 Days" name="test" />
         <InputField handleChange={handleChange} value="san Francisco" title="San Francisco" name="location" />
         <InputField handleChange={handleChange} value="boston" title="Boston" name="location" />
         <InputField handleChange={handleChange} value="madrid" title="Madrid" name="location" />
