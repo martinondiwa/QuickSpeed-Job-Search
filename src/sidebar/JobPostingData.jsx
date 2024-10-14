@@ -13,7 +13,7 @@ const JobPostingData = ({handleChange}) => {
     const twentyFourHoursAgoDate = twentyFourHoursAgo.toISOString().slice(0,10);
     const sevenDaysAgoDate = sevenDaysAgo.toISOString().slice(0,10);
     const ThirtyDaysAgoDate = ThirtyDaysAgo.toISOString().slice(0,10);
-    console.log(twentyFourHoursAgoDate)
+    //console.log(twentyFourHoursAgoDate)
   return (
     <div>
     <h4 className='text-lg font-medium mb-2'>Date of Posting</h4>
@@ -25,7 +25,7 @@ const JobPostingData = ({handleChange}) => {
                 value=""
                 onChange={handleChange}
             />
-            <span className='checkmark'></span> All
+            <span className='checkmark'></span> All time
         </label>
 
         <InputField handleChange={handleChange} value="london" title="London" name="location" />
