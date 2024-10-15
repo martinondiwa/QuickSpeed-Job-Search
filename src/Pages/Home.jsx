@@ -6,14 +6,14 @@ import Sidebar from "../sidebar/Sidebar";
 import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
-  
-  const [selectedLocation, setSelectedLocation] = useState("all-time"); 
+  const [selectedLocation, setSelectedLocation] = useState("all-time");
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(null); // Filter option selected by user
   const itemsPerPage = 6;
 
+  // Fetch jobs data
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -39,19 +39,18 @@ const Home = () => {
     setSelectedLocation(event.target.value);
   };
 
-  const filteredJobs = jobs
+  // Filter jobs based on search query and location
+  let filteredJobs = jobs
     .filter((job) => job.jobTitle.toLowerCase().includes(query.toLowerCase()))
     .filter((job) =>
-      selectedLocation
+      selectedLocation !== "all-time"
         ? job.jobLocation.toLowerCase() === selectedLocation.toLowerCase()
         : true
     );
- 
-  const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentJobs = filteredJobs.slice(startIndex, startIndex + itemsPerPage);
-   if (selected) {
-    filteredJobs = filteredJobs.filter (
+
+  // Further filter jobs based on user-selected criteria
+  if (selected) {
+    filteredJobs = filteredJobs.filter(
       ({
         jobLocation,
         maxPrice,
@@ -64,10 +63,16 @@ const Home = () => {
         parseInt(maxPrice) <= parseInt(selected) ||
         postingDate >= selected ||
         salaryType.toLowerCase() === selected.toLowerCase() ||
-        experienceLevel.toLowerCase() === selected.toLowerCase()||
+        experienceLevel.toLowerCase() === selected.toLowerCase() ||
         employmentType.toLowerCase() === selected.toLowerCase()
     );
-   }
+  }
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentJobs = filteredJobs.slice(startIndex, startIndex + itemsPerPage);
+
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage((prev) => prev + 1);
@@ -106,18 +111,22 @@ const Home = () => {
           )}
           {currentJobs.length > 0 && (
             <div className="flex justify-center mt-4 space-x-8">
-              <button onClick={handlePrevPage} aria-label="Previous Page" disabled={currentPage=== 1} className="hover:underline">
+              <button
+                onClick={handlePrevPage}
+                aria-label="Previous Page"
+                disabled={currentPage === 1}
+                className="hover:underline"
+              >
                 Previous
               </button>
               <span className="mx-2">
-                {" "}
                 Page {currentPage} of {totalPages}
               </span>
               <button
                 onClick={handleNextPage}
                 aria-label="Next Page"
-                disabled={currentPage === totalPages} className="hover:underline"
-                
+                disabled={currentPage === totalPages}
+                className="hover:underline"
               >
                 Next
               </button>
