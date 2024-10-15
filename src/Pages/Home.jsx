@@ -10,6 +10,7 @@ const Home = () => {
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const [selected, setSelected] = useState(null);
   const itemsPerPage = 6;
 
   useEffect(() => {
