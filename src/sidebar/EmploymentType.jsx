@@ -17,9 +17,11 @@ const EmploymentType = ({handleChange}) => {
         </label>
 
         <InputField handleChange={handleChange} 
-        value="Internship" title="Internship" name="test" />
+        value="Full-Time" title="Full-Time" name="test" />
         <InputField handleChange={handleChange} 
-        value="work Remotely" title="Work Remotely" name="test" />
+        value="Temporary" title="Temporary" name="test" />
+        <InputField handleChange={handleChange} 
+        value="Part-Time" title="Part-Time" name="test" />
         
     </div>
 </div>
