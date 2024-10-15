@@ -13,7 +13,7 @@ const EmploymentType = ({handleChange}) => {
                 value=""
                 onChange={handleChange}
             />
-            <span className='checkmark'></span> Any 
+            <span className='checkmark'></span> Any experience
         </label>
 
         <InputField handleChange={handleChange} 
