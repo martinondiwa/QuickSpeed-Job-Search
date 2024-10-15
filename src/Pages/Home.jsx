@@ -51,8 +51,13 @@ const Home = () => {
    if (selected) {
     filteredJobs = filteredJobs.filter (
       ({
-        
-      })
+        jobLocation,
+        maxPrice,
+        experienceLevel,
+        salaryType,
+        employmentType,
+        postingDate,
+      }) =>
     );
    }
   const handleNextPage = () => {
