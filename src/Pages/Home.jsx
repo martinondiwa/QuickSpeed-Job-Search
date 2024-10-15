@@ -44,11 +44,17 @@ const Home = () => {
         ? job.jobLocation.toLowerCase() === selectedLocation.toLowerCase()
         : true
     );
-
+ 
   const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentJobs = filteredJobs.slice(startIndex, startIndex + itemsPerPage);
-
+   if (selected) {
+    filteredJobs = filteredJobs.filter (
+      ({
+        
+      })
+    );
+   }
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage((prev) => prev + 1);
