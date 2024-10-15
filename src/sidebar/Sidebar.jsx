@@ -4,7 +4,6 @@ import Salary from './Salary'
 import JobPostingData from './JobPostingData'
 import Workexperience from './Workexperience'
 import EmploymentType from './EmploymentType'
-
 const Sidebar = ({handleChange, handleClick}) => {
   return (
     <div className='space-y-5'>

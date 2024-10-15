@@ -10,7 +10,15 @@ const Home = () => {
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selected, setSelected] = useState(null); // Filter option selected by user
+  const [query, setQuery] = useState("");
+  const [locationQuery, setLocationQuery] = useState("");
+
+  // New states for advanced filtering
+  const [salaryQuery, setSalaryQuery] = useState("");
+  const [postingDateQuery, setPostingDateQuery] = useState("");
+  const [experienceQuery, setExperienceQuery] = useState("");
+  const [employmentTypeQuery, setEmploymentTypeQuery] = useState("");
+
   const itemsPerPage = 6;
 
   // Fetch jobs data
@@ -30,43 +38,54 @@ const Home = () => {
     fetchJobs();
   }, []);
 
-  const [query, setQuery] = useState("");
   const handleInputChange = (event) => {
     setQuery(event.target.value);
+  };
+
+  const handleLocationChange = (event) => {
+    setLocationQuery(event.target.value);
+  };
+
+  const handleSalaryChange = (event) => {
+    setSalaryQuery(event.target.value);
+  };
+
+  const handlePostingDateChange = (event) => {
+    setPostingDateQuery(event.target.value);
+  };
+
+  const handleExperienceChange = (event) => {
+    setExperienceQuery(event.target.value);
+  };
+
+  const handleEmploymentTypeChange = (event) => {
+    setEmploymentTypeQuery(event.target.value);
   };
 
   const handleChange = (event) => {
     setSelectedLocation(event.target.value);
   };
 
-  // Filter jobs based on search query and location
-  let filteredJobs = jobs
-    .filter((job) => job.jobTitle.toLowerCase().includes(query.toLowerCase()))
-    .filter((job) =>
-      selectedLocation !== "all-time"
-        ? job.jobLocation.toLowerCase() === selectedLocation.toLowerCase()
-        : true
-    );
+  // Filter jobs based on search query and other criteria
+  let filteredJobs = jobs.filter((job) => {
+    const matchesQuery = job.jobTitle.toLowerCase().includes(query.toLowerCase());
+    const matchesLocation = selectedLocation === "all-time" || job.jobLocation.toLowerCase() === selectedLocation.toLowerCase();
+    const matchesLocationQuery = locationQuery ? job.jobLocation.toLowerCase().includes(locationQuery.toLowerCase()) : true;
+    const matchesSalary = salaryQuery ? parseInt(job.maxPrice) <= parseInt(salaryQuery) : true;
+    const matchesPostingDate = postingDateQuery ? new Date(job.postingDate) >= new Date(postingDateQuery) : true;
+    const matchesExperience = experienceQuery ? job.experienceLevel.toLowerCase() === experienceQuery.toLowerCase() : true;
+    const matchesEmploymentType = employmentTypeQuery ? job.employmentType.toLowerCase() === employmentTypeQuery.toLowerCase() : true;
 
-  // Further filter jobs based on user-selected criteria
-  if (selected) {
-    filteredJobs = filteredJobs.filter(
-      ({
-        jobLocation,
-        maxPrice,
-        experienceLevel,
-        salaryType,
-        employmentType,
-        postingDate,
-      }) =>
-        jobLocation.toLowerCase() === selected.toLowerCase() ||
-        parseInt(maxPrice) <= parseInt(selected) ||
-        postingDate >= selected ||
-        salaryType.toLowerCase() === selected.toLowerCase() ||
-        experienceLevel.toLowerCase() === selected.toLowerCase() ||
-        employmentType.toLowerCase() === selected.toLowerCase()
+    return (
+      matchesQuery &&
+      matchesLocation &&
+      matchesLocationQuery &&
+      matchesSalary &&
+      matchesPostingDate &&
+      matchesExperience &&
+      matchesEmploymentType
     );
-  }
+  });
 
   // Pagination calculations
   const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
@@ -87,10 +106,21 @@ const Home = () => {
 
   return (
     <div className="text-blue">
-      <Banner query={query} handleInputChange={handleInputChange} />
+      <Banner
+        query={query}
+        locationQuery={locationQuery}
+        handleInputChange={handleInputChange}
+        handleLocationChange={handleLocationChange}
+      />
       <div className="bg-slate-300 md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
         <div className="bg-white p-4 rounded">
-          <Sidebar handleChange={handleChange} />
+          <Sidebar
+            handleChange={handleChange}
+            handleSalaryChange={handleSalaryChange}
+            handlePostingDateChange={handlePostingDateChange}
+            handleExperienceChange={handleExperienceChange}
+            handleEmploymentTypeChange={handleEmploymentTypeChange}
+          />
         </div>
         <div className="col-span-2 bg-slate-200 p-4 rounded-md">
           {isLoading ? (
@@ -133,7 +163,9 @@ const Home = () => {
             </div>
           )}
         </div>
-        <div className="bg-white p-4 rounded"><NewsLetter/></div>
+        <div className="bg-white p-4 rounded">
+          <NewsLetter />
+        </div>
       </div>
     </div>
   );
