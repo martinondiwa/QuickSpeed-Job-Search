@@ -4,7 +4,7 @@ import InputField from '../components/InputField';
 const EmploymentType = ({handleChange}) => {
   return (
     <div>
-    <h4 className='text-lg font-medium mb-2'>Work Experience</h4>
+    <h4 className='text-lg font-medium mb-2'>Type of Employment</h4>
     <div>
         <label className='sidebar-label-container'>
             <input
@@ -13,7 +13,7 @@ const EmploymentType = ({handleChange}) => {
                 value=""
                 onChange={handleChange}
             />
-            <span className='checkmark'></span> Any Experience
+            <span className='checkmark'></span> Any 
         </label>
 
         <InputField handleChange={handleChange} 
