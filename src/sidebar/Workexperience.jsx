@@ -18,11 +18,9 @@ const Workexperience = ({handleChange}) => {
 
         <InputField handleChange={handleChange} 
         value="Internship" title="Internship" name="test" />
-        <InputField handleChange={handleChange} value="seattle" title="Seattle" name="location" />
-        <InputField handleChange={handleChange} value="brussels" title="Brussels" name="location" />
-        <InputField handleChange={handleChange} value="san Francisco" title="San Francisco" name="location" />
-        <InputField handleChange={handleChange} value="boston" title="Boston" name="location" />
-        <InputField handleChange={handleChange} value="madrid" title="Madrid" name="location" />
+        <InputField handleChange={handleChange} 
+        value="work Remotely" title="Work Remotely" name="test" />
+        
     </div>
 </div>
   );
