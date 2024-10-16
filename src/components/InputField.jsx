@@ -8,8 +8,8 @@ const InputField = ({ handleChange, value, title, name, checked }) => {
         name={name}
         value={value}
         onChange={handleChange}
-        id={value} // Unique ID for each input
-        checked={checked} // Controlled state
+        id={value} 
+        checked={checked} 
       />
       <span className='checkmark'></span> {title}
     </label>
