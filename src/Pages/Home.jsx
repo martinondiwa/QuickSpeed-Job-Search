@@ -87,7 +87,7 @@ const Home = () => {
     );
   });
 
-  // Pagination calculation
+  // Pagination 
   const totalPages = Math.ceil(filteredJobs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentJobs = filteredJobs.slice(startIndex, startIndex + itemsPerPage);
