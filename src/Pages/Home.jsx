@@ -66,7 +66,7 @@ const Home = () => {
     setSelectedLocation(event.target.value);
   };
 
-  // Filter jobs based on search query and other methods
+  // Filtering jobs based on search query and other methods
   let filteredJobs = jobs.filter((job) => {
     const matchesQuery = job.jobTitle.toLowerCase().includes(query.toLowerCase());
     const matchesLocation = selectedLocation === "all-time" || job.jobLocation.toLowerCase() === selectedLocation.toLowerCase();
